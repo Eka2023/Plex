@@ -34,10 +34,8 @@ public class TalkToUsPage extends BaseMain {
         driver.findElement(phone).sendKeys(bphone);
         driver.findElement(company).sendKeys(bcompany);
         driver.findElement(title).sendKeys(btitle);
-        driver.findElement(industryList).click();
-        driver.findElement(By.id(getIndustryList().get(indusrty_index))).click();
-        driver.findElement(countryList).click();
-        driver.findElement(By.id(getCountryList().get(country_index))).click();
+        getIndustryList().get(indusrty_index);
+        getCountryList().get(country_index);
     }
 
     public List<String> getIndustryList() {
