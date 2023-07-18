@@ -22,7 +22,7 @@ public class TalkToUsPageTests extends BaseTest {
     @Test
     public void fillInFormTest() {
         homePage.openTalkToUsPage();
-        talkPage.fillInForm("First Name", "Last name", "business@email.com", "+11111111111", "Company Name", "Title", 2, 3);
+        talkPage.fillInForm("First Name", "Last name", "business@email.com", "+11111111111", "Company Name", "Title", 2, 3, 2);
         assetPage.validation("https://www.plex.com/contact-us", assetPage.getCurrentURL());
     }
 
