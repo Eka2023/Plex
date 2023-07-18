@@ -4,14 +4,14 @@ import lombok.Getter;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import pageobjects.BaseMain;
 
 @Getter
-public class ERPPage extends BaseMain {
+public class APMPage extends BaseMain{
 
-    By header3 = By.xpath("//h3[contains(text(),'Suppliers & Purchasing Management')]");
+    By header3 = By.xpath("//h3[contains(text(),'Consolidate Data Silos')]");
 
-    public ERPPage(WebDriver dr) {
+
+    public APMPage(WebDriver dr) {
         super(dr);
     }
 

@@ -11,7 +11,8 @@ import java.util.List;
 @Getter
 public class HomePage extends BaseMain {
     By menuList = By.xpath("//div[@class='menu-list']");
-    By contactUsBtn = By.xpath("//a[@class='btn-yellow']");
+    //By contactUsBtn = By.xpath("//a[@class='btn-yellow']");
+    By contactUsBtn = By.linkText("Talk to Us");
 
     public HomePage(WebDriver dr) {
         super(dr);
@@ -43,7 +44,7 @@ public class HomePage extends BaseMain {
     }
 
     public void clickSubMenuElement(String name){
-        By subMenuElement = By.xpath("//nav[@class='submenu']//ul/li/a[contains(text(),'"+name+"')]");
+        By subMenuElement = By.partialLinkText(name);
         driver.findElement(subMenuElement).click();
     }
 

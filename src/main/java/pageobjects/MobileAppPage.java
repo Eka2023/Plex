@@ -7,16 +7,15 @@ import org.openqa.selenium.WebElement;
 import pageobjects.BaseMain;
 
 @Getter
-public class ERPPage extends BaseMain {
+public class MobileAppPage extends BaseMain {
 
-    By header3 = By.xpath("//h3[contains(text(),'Suppliers & Purchasing Management')]");
+    By header3 = By.xpath("//h3[contains(text(), 'Multi-Device Flexibility')]");
 
-    public ERPPage(WebDriver dr) {
+    public MobileAppPage(WebDriver dr) {
         super(dr);
     }
 
     public WebElement getPageElement(By locator){
         return driver.findElement(locator);
     }
-
 }

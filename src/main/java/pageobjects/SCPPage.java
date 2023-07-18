@@ -4,19 +4,17 @@ import lombok.Getter;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import pageobjects.BaseMain;
 
 @Getter
-public class ERPPage extends BaseMain {
+public class SCPPage extends BaseMain{
 
-    By header3 = By.xpath("//h3[contains(text(),'Suppliers & Purchasing Management')]");
+    By header3 = By.xpath("//h3[contains(text(),'Cross-Functional Collaboration')]");
 
-    public ERPPage(WebDriver dr) {
+    public SCPPage(WebDriver dr) {
         super(dr);
     }
 
     public WebElement getPageElement(By locator){
         return driver.findElement(locator);
     }
-
 }

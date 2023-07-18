@@ -8,10 +8,8 @@ import org.testng.Assert;
 import utils.Utils;
 
 import java.util.List;
-import java.util.concurrent.locks.Condition;
 
 public class BaseMain extends Utils {
-
     WebDriver driver;
     String baseURL = "https://www.plex.com/";
 
