@@ -1,5 +1,6 @@
 package testcases;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -27,11 +28,14 @@ public class BaseTest {
     public MESAutoPage mesAutoPage;
     public APMPage assetPage;
 
+    public TalkToUsPage talkPage;
+
     @BeforeMethod()
     public void openDriver() {
-        System.setProperty("webdriver.chrome.driver", "src/test/resources/webdriver/chromedriver");
+        //System.setProperty("webdriver.chrome.driver", "src/test/resources/webdriver/chromedriver");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
+        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
@@ -45,6 +49,7 @@ public class BaseTest {
         prodPage = new ProductionMonitoringPage(driver);
         mesAutoPage = new MESAutoPage(driver);
         assetPage = new APMPage(driver);
+        talkPage = new TalkToUsPage(driver);
     }
 
     @AfterMethod()

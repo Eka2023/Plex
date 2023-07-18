@@ -11,9 +11,7 @@ import java.util.List;
 @Getter
 public class HomePage extends BaseMain {
     By menuList = By.xpath("//div[@class='menu-list']");
-    //By contactUsBtn = By.xpath("//a[@class='btn-yellow']");
-    By contactUsBtn = By.linkText("Talk to Us");
-
+    By contactUsBtn = By.xpath("//div[@class='header-right']/div[@class='headerButtons']//a[contains(text(), 'Talk to Us')]");
     public HomePage(WebDriver dr) {
         super(dr);
     }
@@ -49,7 +47,7 @@ public class HomePage extends BaseMain {
     }
 
 
-    public void openContactUsPage() {
+    public void openTalkToUsPage() {
         driver.findElement(contactUsBtn).click();
     }
 
