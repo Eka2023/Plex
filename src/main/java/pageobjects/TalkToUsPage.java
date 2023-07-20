@@ -40,7 +40,7 @@ public class TalkToUsPage extends BaseMain {
         getIndustryList().get(industry_index);
         getCountryList().get(country_index);
         getHowHelpList().get(help_index);
-        driver.findElement(policyCheckBox).click();
+        //driver.findElement(policyCheckBox).click();
         System.out.println(getIndustryList().get(industry_index));
         System.out.println(getCountryList().get(country_index));
         System.out.println(getHowHelpList().get(help_index));

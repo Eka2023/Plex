@@ -15,7 +15,4 @@ public class ProductionMonitoringPage extends BaseMain{
         super(dr);
     }
 
-    public WebElement getPageElement(By locator){
-        return driver.findElement(locator);
-    }
 }

@@ -42,4 +42,8 @@ public class BaseMain extends Utils {
     public String getCurrentURL(){
         return driver.getCurrentUrl();
     }
+
+    public WebElement getPageElement(By locator){
+        return driver.findElement(locator);
+    }
 }

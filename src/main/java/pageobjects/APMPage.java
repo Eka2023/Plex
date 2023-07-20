@@ -15,8 +15,4 @@ public class APMPage extends BaseMain{
         super(dr);
     }
 
-    public WebElement getPageElement(By locator){
-        return driver.findElement(locator);
-    }
-
 }
